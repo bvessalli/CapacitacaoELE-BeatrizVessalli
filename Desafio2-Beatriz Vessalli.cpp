@@ -84,4 +84,5 @@ int main()
             break;
         default:
             cout << "Opção inválida"<<endl;
-        break;
+        break;# CapacitacaoELE-BeatrizVessalli
+# CapacitacaoELE-BeatrizVessalli
