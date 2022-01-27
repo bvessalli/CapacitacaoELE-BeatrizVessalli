@@ -9,18 +9,18 @@ int main()
     float resultado;
 
     while(sair != 0){
-    cout << "\nEscolha uma das opções abaixo\n" << endl;
-    cout << "\nOpções basicas\n" << endl;
+    cout << "Escolha uma das opções abaixo" << endl;
+    cout << "Opções basicas:" << endl;
     cout << "1. Somar" << endl;
     cout << "2. Subtrair" << endl;
     cout << "3. Mutiplicar" << endl;
     cout << "4. Dividir" << endl;
-    cout << "\nOpções Avançadas\n" << endl;
+    cout << "Opções Avançadas:" << endl;
     cout << "5. Dar o resto de uma divisão" << endl;
     cout << "6. Raiz Quadrada " << endl;
-    cout << "7. " << endl;
-    cout << "8. " << endl;
-    cout << "Digite sua opção: ";
+    cout << "7. X elevado a Y" << endl;
+    cout << "8. Fatorial " << endl;
+    cout << "Digite qual operação deseja executar: ";
     cin >> operacao;
     switch (operacao)
     {
@@ -81,8 +81,46 @@ int main()
             cin >> numA;
             resultado=sqrt(numA);
             cout << "\nO resultado é: "<< resultado <<endl;
-            break;
+        break;
+        case 7:
+            cout << "Opção selecionada: X elevado a Y "<<endl;
+            cout << "\nNesta operação o objetivo é Calcular o numero A elevado ao numero B"<<endl;
+            cout << "\nDigite um valor para o numero A"<<endl;
+            cin >> numA;
+            cout << "\n\nDigite um valor para o numero B"<<endl;
+            cin >> numB;
+            
+            if (numB==0)
+            {
+                resultado=1;
+                cout << "\nO resultado é: "<< resultado <<endl;
+            }
+            else if (numB<0)
+            {
+                resultado=numB/numA;
+                cout << "\nO resultado é: "<< resultado <<endl;
+            }
+            else if (numB==1)
+            {
+                resultado=numA;
+                cout << "\nO resultado é: "<< resultado <<endl;
+            }
+            else if (numB>1)
+            {
+                resultado=numA;
+                numB=numB-1;
+                for(int i =0;i<numB;i++){
+                resultado=resultado*numA;
+            }
+            cout << "\nO resultado é: "<< resultado <<endl;
+            }
+        break;
+        
         default:
             cout << "Opção inválida"<<endl;
-        break;# CapacitacaoELE-BeatrizVessalli
-# CapacitacaoELE-BeatrizVessalli
+        break;
+            }
+    cout << "\n\nDigite 0 para sair do programa ou qualquer outro digito para continuar"<<endl;
+            cin >> sair;
+    }   
+}
